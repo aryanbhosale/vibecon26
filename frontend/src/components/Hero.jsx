@@ -1,29 +1,46 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Github, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-20 px-6">
+    <section className="pt-32 pb-24 px-6 bg-gradient-to-b from-blue-50 via-white to-white">
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-3xl">
-          <div className="inline-block px-4 py-2 bg-gray-100 text-sm font-medium mb-6">
-            Competing at VibeHack 2025
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 text-sm font-medium mb-8 rounded-full">
+            <Sparkles className="w-4 h-4" />
+            <span>Open Source Contributors & Builders</span>
           </div>
-          <h1 className="text-6xl font-bold tracking-tight mb-6 leading-tight">
-            Building the future,
+          
+          <h1 className="text-7xl font-bold tracking-tight mb-8 leading-tight">
+            Building the
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"> future</span>
             <br />
-            <span className="text-gray-400">one commit at a time.</span>
+            one commit at a time
           </h1>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            We're ex-devsoc — a team of builders, contributors, and problem solvers passionate about creating impactful technology.
+          
+          <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+            We're <span className="font-semibold text-gray-900">ex-devsoc</span> — a collective of developers contributing to major open-source projects and solving real-world problems through technology.
           </p>
-          <a 
-            href="#team" 
-            className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 font-medium hover:bg-gray-800 transition-colors group"
-          >
-            Meet the Team
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          
+          <div className="flex items-center justify-center gap-4">
+            <a 
+              href="#team" 
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 font-medium rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all group"
+            >
+              Meet the Team
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            
+            <a 
+              href="https://github.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border-2 border-gray-900 text-gray-900 px-8 py-4 font-medium rounded-lg hover:bg-gray-900 hover:text-white transition-all"
+            >
+              <Github className="w-4 h-4" />
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
     </section>

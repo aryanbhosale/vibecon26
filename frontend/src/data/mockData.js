@@ -8,6 +8,20 @@ export const teamData = [
     portfolio: "https://tanish111.github.io/tanishd/",
     github: "https://github.com/tanish111",
     isPlaceholder: false,
+    keyContributions: [
+      {
+        name: "MCP Rust SDK",
+        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUXocOCzJuO37fZSfyuM-UvrMwujVYGODmpp2eh-fvfw&s=10",
+        commits: "Multiple contributions",
+        githubUrl: "https://github.com/modelcontextprotocol/rust-sdk/commits/main/?author=tanish111"
+      },
+      {
+        name: "QEMU Project",
+        logo: "https://canada1.discourse-cdn.com/flex036/uploads/mender/original/1X/81316d46fd53857998394469204a2805a1a2e415.png",
+        commits: "Major patches",
+        githubUrl: "https://github.com/qemu/qemu/commits?author=tanish111"
+      }
+    ],
     achievements: [
       {
         date: "May 2024",
@@ -36,13 +50,13 @@ export const teamData = [
           "Optimized traditional tracing module, saving ~5 ASM instructions per trace call"
         ],
         logo: {
-          type: "text",
-          text: "QEMU"
+          type: "image",
+          src: "https://canada1.discourse-cdn.com/flex036/uploads/mender/original/1X/81316d46fd53857998394469204a2805a1a2e415.png"
         },
         links: [
           {
-            label: "View RFC Patch",
-            url: "https://github.com/qemu"
+            label: "View Commits",
+            url: "https://github.com/qemu/qemu/commits?author=tanish111"
           }
         ]
       },
@@ -72,9 +86,15 @@ export const teamData = [
           "Enhanced SDK functionality and developer experience"
         ],
         logo: {
-          type: "text",
-          text: "MCP"
-        }
+          type: "image",
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUXocOCzJuO37fZSfyuM-UvrMwujVYGODmpp2eh-fvfw&s=10"
+        },
+        links: [
+          {
+            label: "View Commits",
+            url: "https://github.com/modelcontextprotocol/rust-sdk/commits/main/?author=tanish111"
+          }
+        ]
       }
     ]
   },
