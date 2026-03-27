@@ -19,7 +19,7 @@ const TeamFlipCard = ({ member }) => {
   }
 
   return (
-    <div className="perspective-1000 min-h-[600px]">
+    <div className="perspective-1000 h-[600px]">
       <div 
         className={`relative w-full h-full transition-transform duration-700 transform-style-3d cursor-pointer ${
           isFlipped ? 'rotate-y-180' : ''
@@ -27,7 +27,7 @@ const TeamFlipCard = ({ member }) => {
         onClick={() => setIsFlipped(!isFlipped)}
       >
         {/* Front Side */}
-        <Card className="absolute w-full h-full backface-hidden bg-white border-2 border-gray-200 hover:border-blue-500 transition-all rounded-xl shadow-lg flex flex-col">
+        <Card className="absolute w-full h-full backface-hidden bg-white border-2 border-gray-200 hover:border-blue-500 transition-all rounded-xl shadow-lg flex flex-col overflow-hidden">
           {/* Profile Image - Fixed at top */}
           <div className="relative h-48 md:h-64 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-50 flex-shrink-0">
             <img
@@ -45,8 +45,8 @@ const TeamFlipCard = ({ member }) => {
             </div>
           </div>
           
-          {/* Profile Info - No scrolling, auto height */}
-          <div className="p-4 md:p-6">
+          {/* Profile Info - Scrollable area */}
+          <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
             <h3 className="text-xl md:text-2xl font-bold mb-2">{member.name}</h3>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">{member.bio}</p>
             
@@ -64,7 +64,7 @@ const TeamFlipCard = ({ member }) => {
             
             {/* Key Contributions */}
             {member.keyContributions && member.keyContributions.length > 0 && (
-              <div className="space-y-3">
+              <div className="space-y-3 mb-4">
                 <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Key Contributions</h4>
                 
                 {member.keyContributions.map((contrib, idx) => (
@@ -89,7 +89,7 @@ const TeamFlipCard = ({ member }) => {
             
             {/* Links */}
             {(member.portfolio || member.github) && (
-              <div className="flex gap-3 mt-4 pt-4 border-t border-gray-200">
+              <div className="flex gap-3 pt-4 border-t border-gray-200">
                 {member.portfolio && (
                   <a 
                     href={member.portfolio} 
