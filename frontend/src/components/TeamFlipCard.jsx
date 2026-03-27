@@ -38,9 +38,9 @@ const TeamFlipCard = ({ member }) => {
               className="w-full h-full object-cover"
             />
             {/* Top-left corner ribbon strip */}
-            <div className="absolute top-0 left-0 w-32 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 transform origin-top-left rotate-[-35deg] translate-x-[-20px] translate-y-[20px] shadow-lg flex items-center justify-center">
-              <span className="text-white text-[10px] font-bold tracking-wider">
-                CLICK TO KNOW MORE
+            <div className="absolute top-0 left-0 w-28 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 transform origin-top-left rotate-[-35deg] translate-x-[-18px] translate-y-[18px] shadow-lg flex items-center justify-center px-1">
+              <span className="text-white text-[7px] font-bold tracking-tight leading-tight text-center">
+                CLICK TO<br/>KNOW MORE
               </span>
             </div>
           </div>

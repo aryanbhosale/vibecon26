@@ -202,34 +202,4 @@ html {
     .scrollable-content {
         position: relative;
     }
-    
-    /* Animated down arrow indicator */
-    .scrollable-content::after {
-        content: '↓ Scroll ↓';
-        position: sticky;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 4px 12px;
-        background: rgba(59, 130, 246, 0.9);
-        color: white;
-        border-radius: 12px;
-        font-size: 10px;
-        font-weight: 600;
-        z-index: 15;
-        pointer-events: none;
-        animation: bounce-scroll 2s ease-in-out infinite;
-        box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
-    }
-}
-
-@keyframes bounce-scroll {
-    0%, 100% {
-        transform: translateX(-50%) translateY(0);
-        opacity: 0.9;
-    }
-    50% {
-        transform: translateX(-50%) translateY(-5px);
-        opacity: 1;
-    }
 }
