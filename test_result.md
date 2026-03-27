@@ -132,15 +132,33 @@ frontend:
 
   - task: "VibeCon26 Landing Page"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/pages/HomePage.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "VibeCon26 team website deployed with Hero section, Team sections with flip cards, Timeline view, Achievement cards. Needs visual verification."
+      - working: true
+        agent: "main"
+        comment: "Fixed mobile scrolling bug in TeamFlipCard. Card content is now fully scrollable on mobile devices. Added touch-optimized scrolling with -webkit-overflow-scrolling and custom scrollbar styles."
+
+  - task: "Team Flip Cards - Mobile Scrolling"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/TeamFlipCard.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "user"
+        comment: "Bug report: Card content (person info before flip) not scrollable on mobile for all team members. Key Contributions section cut off."
+      - working: true
+        agent: "main"
+        comment: "FIXED: Restructured card layout - image now fixed at top (h-48 on mobile, h-64 on desktop), content area below is fully scrollable with overflow-y-auto. Added iOS touch scrolling support and custom scrollbar. Verified on mobile viewport (390x844)."
 
 metadata:
   created_by: "main_agent"
@@ -158,3 +176,7 @@ test_plan:
 agent_communication:
   - agent: "main"
     message: "Successfully cloned and deployed VibeCon26 repository from GitHub. All services (frontend, backend, MongoDB) are running. Frontend accessible at configured preview URL. Dependencies installed via yarn for frontend and pip for backend."
+  - agent: "user"
+    message: "Bug report: Team member cards not scrollable on mobile. Person info before flip is cut off and Key Contributions section not visible."
+  - agent: "main"
+    message: "FIXED: Restructured TeamFlipCard component layout. Image section now fixed at top with reduced height on mobile (h-48 vs h-64 desktop). Content area (bio, tags, contributions, links) is fully scrollable with proper overflow handling. Added iOS-optimized touch scrolling (-webkit-overflow-scrolling: touch) and custom scrollbar styling. Tested on 390x844 mobile viewport - all content now accessible."
