@@ -25,6 +25,7 @@ const TeamFlipCard = ({ member }) => {
           isFlipped ? 'rotate-y-180' : ''
         }`}
         onClick={() => setIsFlipped(!isFlipped)}
+        style={{ minHeight: 'fit-content' }}
       >
         {/* Front Side */}
         <Card className="relative w-full backface-hidden bg-white border-2 border-gray-200 hover:border-blue-500 transition-all rounded-xl shadow-lg flex flex-col">
@@ -119,10 +120,10 @@ const TeamFlipCard = ({ member }) => {
           </div>
         </Card>
         
-        {/* Back Side */}
-        <Card className="absolute top-0 left-0 w-full min-h-[600px] backface-hidden rotate-y-180 bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-xl overflow-hidden shadow-lg">
-          <div className="h-full flex flex-col p-6">
-            <div className="flex items-center justify-between mb-6">
+        {/* Back Side - Same height as front with scrolling */}
+        <Card className="absolute top-0 left-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-xl shadow-lg flex flex-col overflow-hidden">
+          <div className="flex-shrink-0 p-4 md:p-6 border-b border-blue-200">
+            <div className="flex items-center justify-between">
               <h3 className="text-xl font-bold text-gray-900">Builder Journey</h3>
               <button 
                 className="p-2 hover:bg-white/50 rounded-full transition-colors"
@@ -134,10 +135,10 @@ const TeamFlipCard = ({ member }) => {
                 <RotateCcw className="w-4 h-4 text-gray-600" />
               </button>
             </div>
-            
-            <div className="flex-1 overflow-y-auto">
-              <TimelineView achievements={member.achievements} />
-            </div>
+          </div>
+          
+          <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
+            <TimelineView achievements={member.achievements} />
           </div>
         </Card>
       </div>
