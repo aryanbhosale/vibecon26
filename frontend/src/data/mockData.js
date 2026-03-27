@@ -100,12 +100,26 @@ export const teamData = [
   },
   {
     name: "Mahir Ghadiali",
-    photo: "",
+    photo: "/mahir-photo.jpg",
     bio: "Systems-focused builder with a strong interest in AI agents, distributed systems, and production-grade backend architecture. Passionate about shipping scalable, real-world systems end-to-end.",
     tags: ["AI Agents", "Rust Backend", "Distributed Systems", "Full-Stack Developer"],
     portfolio: "",
     github: "https://github.com/fizy069",
     isPlaceholder: false,
+    keyContributions: [
+      {
+        name: "Multi-Agent Automation",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png",
+        commits: "Production system",
+        githubUrl: "https://github.com/fizy069"
+      },
+      {
+        name: "Rust Backend Systems",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg",
+        commits: "8-crate workspace",
+        githubUrl: "https://github.com/fizy069"
+      }
+    ],
     achievements: [
       {
         date: "2026",

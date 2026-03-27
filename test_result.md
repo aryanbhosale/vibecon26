@@ -159,6 +159,12 @@ frontend:
       - working: true
         agent: "main"
         comment: "FIXED: Restructured card layout - image now fixed at top (h-48 on mobile, h-64 on desktop), content area below is fully scrollable with overflow-y-auto. Added iOS touch scrolling support and custom scrollbar. Verified on mobile viewport (390x844)."
+      - working: false
+        agent: "user"
+        comment: "Three issues: 1) Internal tile scrolling not visible on phone 2) Change 'Click to flip' to left side strip saying 'Click to know more' 3) mahir.png not rendering"
+      - working: true
+        agent: "main"
+        comment: "ALL FIXED: 1) Added visual scroll indicators with fade gradients and pulse animation on mobile 2) Replaced top-right badge with left vertical strip (w-8, blue gradient) displaying 'CLICK TO KNOW MORE' in rotated text 3) Fixed Mahir's photo path from empty string to '/mahir-photo.jpg' and added keyContributions for complete card display."
 
 metadata:
   created_by: "main_agent"

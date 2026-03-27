@@ -35,13 +35,19 @@ const TeamFlipCard = ({ member }) => {
               alt={member.name}
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-blue-600">
-              Click to flip
+            {/* Left side vertical strip */}
+            <div className="absolute left-0 top-0 h-full w-8 bg-gradient-to-b from-blue-600 to-cyan-600 flex items-center justify-center">
+              <div className="transform -rotate-90 whitespace-nowrap text-white text-xs font-semibold tracking-wider">
+                CLICK TO KNOW MORE
+              </div>
             </div>
           </div>
           
-          {/* Profile Info - Scrollable area */}
-          <div className="flex-1 overflow-y-auto p-4 md:p-6">
+          {/* Profile Info - Scrollable area with visual indicators */}
+          <div className="flex-1 overflow-y-auto p-4 md:p-6 scrollable-content relative">
+            {/* Scroll indicator at top */}
+            <div className="scroll-fade-top"></div>
+            
             <h3 className="text-xl md:text-2xl font-bold mb-2">{member.name}</h3>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">{member.bio}</p>
             
@@ -81,7 +87,7 @@ const TeamFlipCard = ({ member }) => {
             </div>
             
             {/* Links */}
-            <div className="flex gap-3 mt-4 pt-4 border-t border-gray-200">
+            <div className="flex gap-3 mt-4 pt-4 border-t border-gray-200 mb-2">
               {member.portfolio && (
                 <a 
                   href={member.portfolio} 
@@ -107,6 +113,9 @@ const TeamFlipCard = ({ member }) => {
                 </a>
               )}
             </div>
+            
+            {/* Scroll indicator at bottom */}
+            <div className="scroll-fade-bottom"></div>
           </div>
         </Card>
         
