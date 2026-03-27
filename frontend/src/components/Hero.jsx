@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Github, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -19,26 +19,16 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-            We're <span className="font-semibold text-gray-900">ex-devsoc</span> — a collective of developers contributing to major open-source projects and solving real-world problems through technology.
+            We're <span className="font-semibold text-gray-900">devsoc</span> — a collective of developers contributing to major open-source projects and solving real-world problems through technology.
           </p>
           
           <div className="flex items-center justify-center gap-4">
-            <a 
-              href="#team" 
+            <a
+              href="#team"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 font-medium rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all group"
             >
               Meet the Team
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            
-            <a 
-              href="https://github.com/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border-2 border-gray-900 text-gray-900 px-8 py-4 font-medium rounded-lg hover:bg-gray-900 hover:text-white transition-all"
-            >
-              <Github className="w-4 h-4" />
-              GitHub
             </a>
           </div>
         </div>

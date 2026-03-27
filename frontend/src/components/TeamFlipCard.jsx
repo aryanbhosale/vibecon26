@@ -28,11 +28,11 @@ const TeamFlipCard = ({ member }) => {
       >
         {/* Front Side */}
         <Card className="absolute w-full h-full backface-hidden bg-white border-2 border-gray-200 hover:border-blue-500 transition-all rounded-xl overflow-hidden shadow-lg">
-          <div className="h-full flex flex-col">
+          <div className="h-full flex flex-col overflow-y-auto">
             {/* Profile Image */}
-            <div className="relative h-64 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-50">
-              <img 
-                src={member.photo} 
+            <div className="relative h-64 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-50 flex-shrink-0">
+              <img
+                src={member.photo}
                 alt={member.name}
                 className="w-full h-full object-cover"
               />
