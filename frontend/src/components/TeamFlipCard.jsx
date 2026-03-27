@@ -19,15 +19,15 @@ const TeamFlipCard = ({ member }) => {
   }
 
   return (
-    <div className="perspective-1000 h-[600px]">
+    <div className="perspective-1000">
       <div 
-        className={`relative w-full h-full transition-transform duration-700 transform-style-3d cursor-pointer ${
+        className={`relative w-full transition-transform duration-700 transform-style-3d cursor-pointer ${
           isFlipped ? 'rotate-y-180' : ''
         }`}
         onClick={() => setIsFlipped(!isFlipped)}
       >
         {/* Front Side */}
-        <Card className="absolute w-full h-full backface-hidden bg-white border-2 border-gray-200 hover:border-blue-500 transition-all rounded-xl shadow-lg flex flex-col overflow-hidden">
+        <Card className="relative w-full backface-hidden bg-white border-2 border-gray-200 hover:border-blue-500 transition-all rounded-xl shadow-lg flex flex-col">
           {/* Profile Image - Fixed at top */}
           <div className="relative h-48 md:h-64 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-50 flex-shrink-0">
             <img
@@ -45,8 +45,8 @@ const TeamFlipCard = ({ member }) => {
             </div>
           </div>
           
-          {/* Profile Info - Scrollable area */}
-          <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
+          {/* Profile Info - Auto height, no scrolling */}
+          <div className="p-4 md:p-6">
             <h3 className="text-xl md:text-2xl font-bold mb-2">{member.name}</h3>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">{member.bio}</p>
             
@@ -120,7 +120,7 @@ const TeamFlipCard = ({ member }) => {
         </Card>
         
         {/* Back Side */}
-        <Card className="absolute w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-xl overflow-hidden shadow-lg">
+        <Card className="absolute top-0 left-0 w-full min-h-[600px] backface-hidden rotate-y-180 bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-xl overflow-hidden shadow-lg">
           <div className="h-full flex flex-col p-6">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-xl font-bold text-gray-900">Builder Journey</h3>
