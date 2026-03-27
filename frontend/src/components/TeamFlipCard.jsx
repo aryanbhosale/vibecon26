@@ -21,30 +21,32 @@ const TeamFlipCard = ({ member }) => {
   return (
     <div className="perspective-1000 h-[600px] md:h-[600px]">
       <div 
-        className={`relative w-full h-full transition-transform duration-700 transform-style-3d cursor-pointer ${
+        className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
           isFlipped ? 'rotate-y-180' : ''
         }`}
-        onClick={() => setIsFlipped(!isFlipped)}
       >
         {/* Front Side */}
         <Card className="absolute w-full h-full backface-hidden bg-white border-2 border-gray-200 hover:border-blue-500 transition-all rounded-xl shadow-lg flex flex-col">
           {/* Profile Image - Fixed at top */}
-          <div className="relative h-48 md:h-64 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-50 flex-shrink-0">
+          <div 
+            className="relative h-48 md:h-64 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-50 flex-shrink-0 cursor-pointer"
+            onClick={() => setIsFlipped(!isFlipped)}
+          >
             <img
               src={member.photo}
               alt={member.name}
               className="w-full h-full object-cover"
             />
-            {/* Left side vertical strip */}
-            <div className="absolute left-0 top-0 h-full w-8 bg-gradient-to-b from-blue-600 to-cyan-600 flex items-center justify-center">
-              <div className="transform -rotate-90 whitespace-nowrap text-white text-xs font-semibold tracking-wider">
+            {/* Top-left corner ribbon strip */}
+            <div className="absolute top-0 left-0 w-32 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 transform origin-top-left rotate-[-35deg] translate-x-[-20px] translate-y-[20px] shadow-lg flex items-center justify-center">
+              <span className="text-white text-[10px] font-bold tracking-wider">
                 CLICK TO KNOW MORE
-              </div>
+              </span>
             </div>
           </div>
           
-          {/* Profile Info - Scrollable area with visual indicators */}
-          <div className="flex-1 overflow-y-auto p-4 md:p-6 scrollable-content relative">
+          {/* Profile Info - Scrollable area - NO onClick here */}
+          <div className="flex-1 overflow-y-auto p-4 md:p-6 scrollable-content relative touch-pan-y">
             {/* Scroll indicator at top */}
             <div className="scroll-fade-top"></div>
             

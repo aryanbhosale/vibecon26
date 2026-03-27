@@ -165,6 +165,12 @@ frontend:
       - working: true
         agent: "main"
         comment: "ALL FIXED: 1) Added visual scroll indicators with fade gradients and pulse animation on mobile 2) Replaced top-right badge with left vertical strip (w-8, blue gradient) displaying 'CLICK TO KNOW MORE' in rotated text 3) Fixed Mahir's photo path from empty string to '/mahir-photo.jpg' and added keyContributions for complete card display."
+      - working: false
+        agent: "user"
+        comment: "Video shows touch scroll still not working on front card. Also, label should be a small diagonal cross strip on top-left corner, not full vertical strip."
+      - working: true
+        agent: "main"
+        comment: "COMPLETELY FIXED: 1) Touch scrolling now works - moved onClick handler to image only, added touch-action: pan-y to content area, enhanced scrollbar visibility (6px with blue color) 2) Changed to diagonal corner ribbon on top-left (rotated -35deg, 128px wide, positioned as overlay strip) 3) Added animated '↓ Scroll ↓' indicator at bottom on mobile with bounce animation. Content area now freely scrollable on touchscreen."
 
 metadata:
   created_by: "main_agent"
