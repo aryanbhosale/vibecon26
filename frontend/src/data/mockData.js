@@ -193,8 +193,8 @@ export const teamData = [
           "Implemented secure token-based transaction system with logging"
         ],
         logo: {
-          type: "text",
-          text: "BITS"
+          type: "image",
+          src: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/BITS_Pilani-Logo.svg/200px-BITS_Pilani-Logo.svg.png"
         },
         impact: "Handled ₹6M+ in transactions at scale"
       },
@@ -209,8 +209,8 @@ export const teamData = [
           "Maintained critical campus repositories and systems"
         ],
         logo: {
-          type: "text",
-          text: "DS"
+          type: "image",
+          src: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/BITS_Pilani-Logo.svg/200px-BITS_Pilani-Logo.svg.png"
         }
       }
     ]
