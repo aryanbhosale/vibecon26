@@ -33,8 +33,8 @@ export const teamData = [
           "Acknowledged by Greg Hart, CEO of Coursera"
         ],
         logo: {
-          type: "text",
-          text: "CRS"
+          type: "image",
+          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Coursera-Logo.png/200px-Coursera-Logo.png"
         },
         impact: "Recognized by Coursera leadership for innovation"
       },
@@ -71,8 +71,8 @@ export const teamData = [
           "Streamlined the entire housing allocation process"
         ],
         logo: {
-          type: "text",
-          text: "BITS"
+          type: "image",
+          src: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/BITS_Pilani-Logo.svg/200px-BITS_Pilani-Logo.svg.png"
         },
         impact: "Serving 900+ students annually"
       },
@@ -132,8 +132,8 @@ export const teamData = [
           "Enabled fully automated end-to-end testing with zero manual intervention"
         ],
         logo: {
-          type: "text",
-          text: "CISCO"
+          type: "image",
+          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png"
         }
       },
       {
@@ -163,8 +163,8 @@ export const teamData = [
           "Implemented SQL-like operators for filtering, aggregation, and joins"
         ],
         logo: {
-          type: "text",
-          text: "CISCO"
+          type: "image",
+          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png"
         }
       },
       {
