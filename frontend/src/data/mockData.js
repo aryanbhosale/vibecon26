@@ -34,7 +34,7 @@ export const teamData = [
         ],
         logo: {
           type: "image",
-          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Coursera-Logo.png/200px-Coursera-Logo.png"
+          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/960px-Coursera-Logo_600x600.svg.png?_=20201202074033"
         },
         impact: "Recognized by Coursera leadership for innovation"
       },
